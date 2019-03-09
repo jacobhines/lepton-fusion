@@ -1,7 +1,7 @@
 import cv2
 from datetime import datetime
 from time import sleep
-from picamera import Picamera
+from picamera import PiCamera
 from subprocess import call
 from gpiozero import Button
 
@@ -14,7 +14,7 @@ def snap():
 b = Button(12)
 b.when_pressed = snap
 
-camera_vis = Picamera()
+camera_vis = PiCamera()
 camera_vis.resolution = (3280,2464)
 
 print("Initialized")
